@@ -8,12 +8,13 @@ const Events = () => {
     <View>
       <Text>{data}</Text>
       <Pressable
+        testID="increment-button"
         style={{ padding: 10, marginTop: 10, backgroundColor: "pink" }}
         onPress={() => setData((prev) => prev + 1)}
       >
         <Text>Click to Add</Text>
       </Pressable>
-      <Button title="Decrement" onPress={() => setData((prev) => prev - 1)} />
+      <Button title="Decrement" testID="DECREMENT-BUTTON" onPress={() => setData((prev) => prev - 1)} />
     </View>
   );
 };

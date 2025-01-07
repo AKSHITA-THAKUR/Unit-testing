@@ -14,3 +14,10 @@ test("mock function", () => {
   expect(add).toHaveBeenCalledTimes(1); //Chck how many times called
   expect(add).toHaveBeenCalledWith(8, 2); // check the parameters to be called with
 });
+
+test("should check strings " , ()=>{
+    render(<Insert name="Akshita" />);
+    const user = screen.getByText("akshita thakur" , {exact:false})
+})
+
+

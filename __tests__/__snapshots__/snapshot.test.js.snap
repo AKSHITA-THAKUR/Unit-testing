@@ -106,7 +106,7 @@ exports[`snapshot test for index component 1`] = `
           ]
         }
       >
-         Click button
+        Click button
       </Text>
     </View>
   </View>

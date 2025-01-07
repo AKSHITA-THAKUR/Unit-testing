@@ -6,13 +6,19 @@ test("check if click works", () => {
   render(<Event />);
   const dataText = screen.getByText("0");
   expect(dataText).toBeTruthy();
-  const button = screen.getByRole("button");
-  expect(button).toBeTruthy();
-  const pressable = screen.getByText("Click to Add");
+  const pressable = screen.getByTestId("increment-button")
   fireEvent.press(pressable);
   const updatedDataText = screen.getByText("1");
   expect(updatedDataText).toBeTruthy();
 });
+
+test("i want to check if decrement works" , ()=>{
+  render(<Event />);
+ const element = screen.getByTestId("DECREMENT-BUTTON")
+  fireEvent.press(element);
+  const updatedDataText = screen.getByText("-1");
+  expect(updatedDataText).toBeTruthy();
+})
 
 
 //JEST HOOKS :- BeforeAll and BeforeEach

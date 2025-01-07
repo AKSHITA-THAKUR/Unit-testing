@@ -1,5 +1,5 @@
 import Index from "../app/index.tsx";
-import { render, screen } from "@testing-library/react-native";
+import { render, screen , fireEvent } from "@testing-library/react-native";
 
 test("renders the screen", () => {
   render(<Index />);
@@ -27,3 +27,11 @@ describe("This is to create group", () => {
       expect(button).toBeTruthy();
     });
 });
+const mockConsole = jest.spyOn(console , 'log').mockImplementation();
+test("Test line 25" , ()=>{
+  render(<Index />);
+   const button = screen.getByRole("button");
+   fireEvent.press(button);
+   expect(mockConsole).toHaveBeenCalled();
+   mockConsole.mockRestore();
+})

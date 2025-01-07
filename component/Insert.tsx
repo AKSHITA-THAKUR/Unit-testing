@@ -7,6 +7,7 @@ const Insert: React.FC<name> = ({ name }) => {
   return (
     <View>
       <Text>{name}</Text>
+      <View><Text>Akshita Thakur</Text></View>
     </View>
   );
 };

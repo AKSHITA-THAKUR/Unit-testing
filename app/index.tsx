@@ -1,11 +1,6 @@
 import { Text, View, TextInput, Button, Pressable } from "react-native";
 
 export default function Index() {
-  const handleFunction = () => {
-    //To check this function we need to export this to external file
-    console.log("Hii");
-    return "hii";
-  };
 
   return (
     <View
@@ -21,7 +16,7 @@ export default function Index() {
         <Text>Create Group</Text>
       </Pressable>
       <Button
-        title=" Click button"
+        title="Click button"
         onPress={() => console.log("Group created")}
       />
     </View>
